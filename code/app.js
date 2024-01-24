@@ -25,7 +25,7 @@ app.use(
   createProxyMiddleware({
     target: "wss://speech.platform.bing.com",
     changeOrigin: true,
-    ws: true, // 开启WebSocket代理
+    // ws: true, // 开启WebSocket代理
     // secure: false, // 如果您的代理服务器不使用HTTPS，可以设置为false
     onProxyRes: function (proxyRes, req, res) {
       proxyRes.headers["Access-Control-Allow-Origin"] = "*";
